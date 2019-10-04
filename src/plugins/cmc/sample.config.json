@@ -1,0 +1,12 @@
+{
+    "module_name": "CoinMarketCap",
+    "description": "Realize consultas de covnersão de criptomoedas.",
+    "functions": [
+        {
+            "name": "conversão",
+            "description": "digite cmcConvert + valor + moeda base + moeda cotação para saber a coatação",
+            "keypass": "cmconvert"
+        }
+    ],
+    "APIKEY": "xxxxxxxxxxxxxxxxxxxxx"
+}

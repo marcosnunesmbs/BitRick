@@ -1,8 +1,7 @@
 {
     "botToken": "930104685:AAFDIgZEJRL0FnA6HT7e0_ccpjqrLeNhR3g",
     "modules": [
-        "binance",
-        "cmc"
+        "binance"
     ],
     "TelegramID": "392285660"
 }

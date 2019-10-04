@@ -1,2 +1,5 @@
 /node_modules
 package-lock.json
+/src/confi/config.json
+/src/plugins/binance/config.js
+/src/plugins/cmc/config.js

@@ -16,6 +16,7 @@
     "lodash": "^4.17.15",
     "node-binance-api": "^0.9.5",
     "node-telegram-bot-api": "^0.30.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "telegraf": "^3.32.0"
   }
 }
