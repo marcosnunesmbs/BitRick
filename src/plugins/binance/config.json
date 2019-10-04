@@ -1,0 +1,23 @@
+{
+    "module_name": "Binance",
+    "description": "Realize consultas na exchange Binance.",
+    "functions": [
+        {
+            "name": "consultar saldo",
+            "description": "digite bbalance + moeda para saber o salgo",
+            "keypass": "bbalance"
+        },
+        {
+            "name": "consultar cotação",
+            "description": "digite btrade + par para saber a cotação",
+            "keypass": "bprice"
+        },
+        {
+            "name": "consultar ordens",
+            "description": "digite bordens + par para saber as ordens finalizadas e em aberto",
+            "keypass": "borders"
+        }
+    ],
+    "APIKEY": "G9P1jhDvdCkgRwaS51Mr2cYdbSfcNCFYkyRy4H5dnqzvRtqbQn2htKSOeT9t2Ofc",
+    "APISECRET": "mRCZIJxF8Geh9DU039n6tZjXkkTBbuw9vLjOGYEsqHXwR4FlsoPH2mSfnRb5dxHa"
+}
