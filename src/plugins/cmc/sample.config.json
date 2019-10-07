@@ -4,7 +4,7 @@
     "functions": [
         {
             "name": "conversão",
-            "description": "digite cmcConvert + valor + moeda base + moeda cotação para saber a coatação",
+            "description": "digite /cmconvert + valor + moeda base + moeda cotação para saber a coatação",
             "keypass": "cmconvert"
         }
     ],

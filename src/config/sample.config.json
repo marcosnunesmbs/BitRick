@@ -1,7 +1,8 @@
 {
     "botToken": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "modules": [
-        "binance"
+        "binance",
+        "cmc"
     ],
     "TelegramID": "xxxxxxxxxxxxxx"
 }

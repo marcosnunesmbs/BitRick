@@ -8,24 +8,22 @@ var config = require('./config.json')
 
 const balanceButtons = Markup.inlineKeyboard([
     Markup.callbackButton('BTC', 'getBalance btc'),
-    Markup.callbackButton('DOGE', 'getBalance doge'),
-    Markup.callbackButton('DOGE', 'getBalance doge'),
+    Markup.callbackButton('NANO', 'getBalance nano'),
+    Markup.callbackButton('USDT', 'getBalance usdt'),
     Markup.callbackButton('BNB', 'getBalance bnb'),
     Markup.callbackButton('LINK', 'getBalance link'),
     Markup.callbackButton('DGB', 'getBalance dgb'),
-    Markup.callbackButton('NANO', 'getBalance nano'),
-    Markup.callbackButton('USDT', 'getBalance usdt'),
+    Markup.callbackButton('OUTRA', 'helpBalance'),
   ], { columns: 3 }).extra()
 
   const priceButtons = Markup.inlineKeyboard([
-    Markup.callbackButton('DASH', 'getPrice dash'),
-    Markup.callbackButton('DOGE', 'getPrice doge'),
-    Markup.callbackButton('DOGE', 'getPrice doge'),
+    Markup.callbackButton('BTC', 'getPrice btc'),
+    Markup.callbackButton('NANO', 'getPrice nano'),
+    Markup.callbackButton('USDC', 'getPrice usdc'),
     Markup.callbackButton('BNB', 'getPrice bnb'),
     Markup.callbackButton('LINK', 'getPrice link'),
     Markup.callbackButton('DGB', 'getPrice dgb'),
-    Markup.callbackButton('NANO', 'getPrice nano'),
-    Markup.callbackButton('BTC', 'getPrice btc'),
+    Markup.callbackButton('OUTRA', 'helpPrice'),
   ], { columns: 3 }).extra()
 
     bot.command('bbalance', (ctx) => {
@@ -66,6 +64,12 @@ const balanceButtons = Markup.inlineKeyboard([
         var currency = ctx.match[1]
         Exchange.getPrice(currency, ctx.from.first_name)
             .then(resp => ctx.reply(resp))
+    })
+    bot.action(/helpBalance/, ctx => {
+        ctx.replyWithMarkdown("Digite */bbalance + MOEDA* para saber o saldo.")
+    })
+    bot.action(/helpPrice/, ctx => {
+        ctx.replyWithMarkdown("Digite */bprice + MOEDA* para saber o saldo.")
     })
 
 module.exports = {

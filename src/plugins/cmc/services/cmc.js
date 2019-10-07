@@ -25,7 +25,7 @@ var CoinMC = {
       
 
       rp(requestOptions).then(response => {
-        var message = value + " " + a + "\nCotação: " + response.data.quote[b].price + " " + b + "\nCompra: " + parseFloat(response.data.quote[b].price)*0.975 + " " + b +"\nVenda: " + parseFloat(response.data.quote[b].price)*1.025+ " " + b 
+        var message = "*"+value + " " + a + "*\nCotação: " + response.data.quote[b].price + " " + b + "\nCompra: " + parseFloat(response.data.quote[b].price)*0.975 + " " + b +"\nVenda: " + parseFloat(response.data.quote[b].price)*1.025+ " " + b 
         console.log("CoinMarketcap Converting...")
         resolve(message)
       }).catch((err) => {
