@@ -87,7 +87,7 @@ This plugin offers a cryptocurrency conversion based on CoinMarketCap API.
 
 
 
-
+## Doante
 If You like this bot, you can donate. Thanks.
 
 NANO: nano_3mjxfnquraoygt4u6uxipeh9pznwbmzx7ncy1dk5ahe6qnf197x917d6ghom
