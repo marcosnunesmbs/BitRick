@@ -25,6 +25,10 @@ This is a personal telegram bot. Some plugins are added to the project to provid
 
 5. You can find the avaliable services in **/src/plugins** folders.
 
+6. Serach your bot username on Telegram and start it.
+
+7. Join It!
+
 # Plugins
 ## Structure
 
@@ -80,3 +84,8 @@ This plugin offers a cryptocurrency conversion based on CoinMarketCap API.
 *You need to config your APIKEY in __/src/plugins/cmc/config.js__*
 
 >Main Command: /coinmarketcap
+
+*If You like this bot, you can donate. Thanks.*
+> NANO: nano_3mjxfnquraoygt4u6uxipeh9pznwbmzx7ncy1dk5ahe6qnf197x917d6ghom
+
+> Bitcoin: 3Mt3hGJGWpN2p5AmeAzGvK5Uu9pegSz5J5
