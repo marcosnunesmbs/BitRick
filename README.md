@@ -4,8 +4,9 @@ A Telegram Assistent Bot
 This is a personal telegram bot. Some plugins are added to the project to provide additional bot services.
 #  Getting Started
 
-> Firts, git clone https://github.com/marcosnunesmbs/BitRick.git
-> cd BitRick
+> Firts: git clone https://github.com/marcosnunesmbs/BitRick.git
+
+> Next: cd BitRick
 
  1. Create a Telegram Bot and save the Token with @BotFather.
  
