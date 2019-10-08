@@ -76,7 +76,8 @@ The config.js is necessary to bot map all plugins that have and create the comma
 		"APISECRET":  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 	}
 
-Them module_name key will be used to bot create the command to show the funcitons commands.
+The module_name key will be used to bot create the command to show the funcitons commands.
+
 Ex:
 ![start command mapping services](http://www.dotcomma.com.br/wp-content/uploads/2019/10/start-sample.png)
 
