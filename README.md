@@ -54,7 +54,7 @@ The config.js is necessary to bot map all plugins that have and create the comma
 
 Them module_name key will be used to bot create the command to show the funcitons commands.
 Ex:
-![enter image description here](https://picasaweb.google.com/114190843248304509797/6745232029237790289#6745232031528258162)
+![start command mapping services](http://www.dotcomma.com.br/wp-content/uploads/2019/10/start-sample.png)
 
 ## Available Plugins
 ### Binance
