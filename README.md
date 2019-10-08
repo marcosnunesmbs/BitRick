@@ -18,6 +18,44 @@ This is a personal telegram bot. Some plugins are added to the project to provid
 # Plugins
 ## Structure
 
+ - index.js - main file
+ - config.js - a plugin configuration file
+ - responses.js - a array of bot responses to errors
+ - /services/plugin-name.js - the file that provider connection with api services.
+
+The config.js is necessary to bot map all plugins that have and create the commands helpers.
+
+> The bot will just map the services that been set in main config.js modules key.
+### config.js
+
+    {
+		"module_name":  "Binance",
+		"description":  "Realize consultas na exchange Binance.",
+		"functions":  [
+			{
+			"name":  "consultar saldo",
+			"description":  "digite bbalance + moeda para saber o salgo",
+			"keypass":  "bbalance"
+			},
+			{
+			"name":  "consultar cotação",
+			"description":  "digite btrade + par para saber a cotação",
+			"keypass":  "bprice"
+			},
+			{
+			"name":  "consultar ordens",
+			"description":  "digite bordens + par para saber as ordens finalizadas e em aberto",
+			"keypass":  "borders"
+			}
+		],
+		"APIKEY":  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"APISECRET":  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+	}
+
+Them module_name key will be used to bot create the command to show the funcitons commands.
+Ex:
+![enter image description here](https://picasaweb.google.com/114190843248304509797/6745232029237790289#6745232031528258162)
+
 ## Available Plugins
 ### Binance
 This plugin provides some Binance's Servies like: Consult Balances, Verify Criptocurrencys Prices and Your last orders.
