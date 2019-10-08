@@ -1,5 +1,6 @@
 
 # BitRick
+![](http://www.dotcomma.com.br/wp-content/uploads/2019/10/rick-sanchez.png)
 A Telegram Assistent Bot
 This is a personal telegram bot. Some plugins are added to the project to provide additional bot services.
 #  Getting Started
