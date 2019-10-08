@@ -8,6 +8,8 @@ This is a personal telegram bot. Some plugins are added to the project to provid
 
 > Next: cd BitRick
 
+## Configuration
+
  1. Create a Telegram Bot and save the Token with @BotFather.
  
 	1.1. Open your Telegram and search for:  **@BotFather**;
