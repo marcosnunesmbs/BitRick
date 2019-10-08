@@ -85,7 +85,11 @@ This plugin offers a cryptocurrency conversion based on CoinMarketCap API.
 
 >Main Command: /coinmarketcap
 
-*If You like this bot, you can donate. Thanks.*
-> NANO: nano_3mjxfnquraoygt4u6uxipeh9pznwbmzx7ncy1dk5ahe6qnf197x917d6ghom
 
-> Bitcoin: 3Mt3hGJGWpN2p5AmeAzGvK5Uu9pegSz5J5
+
+
+If You like this bot, you can donate. Thanks.
+
+NANO: nano_3mjxfnquraoygt4u6uxipeh9pznwbmzx7ncy1dk5ahe6qnf197x917d6ghom
+
+Bitcoin: 3Mt3hGJGWpN2p5AmeAzGvK5Uu9pegSz5J5
