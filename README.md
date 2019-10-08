@@ -19,7 +19,7 @@ This is a personal telegram bot. Some plugins are added to the project to provid
 ## Structure
 
  - index.js - main file
- - config.js - a plugin configuration file
+ - config.js - the plugin configuration file
  - responses.js - a array of bot responses to errors
  - /services/plugin-name.js - the file that provider connection with api services.
 
