@@ -3,8 +3,54 @@ const { bot } = require('../../config/telegram')
 const { Extra } = require('../../config/telegram')
 const { Markup } = require('../../config/telegram')
 
+const Composer = require('telegraf/composer')
+const session = require('telegraf/session')
+const Stage = require('telegraf/stage')
+const WizardScene = require('telegraf/scenes/wizard')
+
 var responses = require('./reponses')
 var config = require('./config.json')
+
+// var orders = ''
+
+// const baseCoinHandler = new Composer()
+// baseCoinHandler.action('next', (ctx) => {
+//   ctx.reply('Step 2. Via inline button')
+//   return ctx.wizard.next()
+// })
+// baseCoinHandler.command('next', (ctx) => {
+//   ctx.reply('Step 2. Via command')
+//   return ctx.wizard.next()
+// })
+// baseCoinHandler.use((ctx) => ctx.replyWithMarkdown('Por favor, digite a moeda base.'))
+
+// const superWizard = new WizardScene('searchorder',
+//   (ctx) => {
+//     ctx.reply('Por favor, digite a moeda base')
+//     return ctx.wizard.next()
+//   },
+//   (ctx) => {
+//     orders = ctx.message.text
+//     ctx.reply('Agora digite a moeda de cotação')
+//     return ctx.wizard.next()
+//   },
+//   (ctx) => {
+//     orders = ctx.message.text
+//     ctx.reply('Aqui estão as últimas 5 ordens:')
+//     return ctx.scene.next()
+//   },
+//   (ctx) => {
+//     Exchange.getOrders(currency[1], ctx.from.first_name)
+//     .then(resp =>  {
+//         ctx.reply(resp) 
+//     })
+//   }
+// )
+
+// const stage = new Stage([superWizard], { default: 'searchorder' })
+// bot.use(session())
+// bot.use(stage.middleware())
+
 
 const balanceButtons = Markup.inlineKeyboard([
     Markup.callbackButton('BTC', 'getBalance btc'),
@@ -48,6 +94,7 @@ const balanceButtons = Markup.inlineKeyboard([
     bot.command('borders', (ctx) => {
         var currency = ctx.message.text.split(" ")
         if (!currency[1]) {
+            // Stage.enter('searchorder')
             ctx.reply("Por favor, digite /borders + SÍMBOLO para saber o saldo. Ex:\n /borders BTCBNB")
         } else {
             Exchange.getOrders(currency[1], ctx.from.first_name)
