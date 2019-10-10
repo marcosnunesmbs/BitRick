@@ -11,41 +11,42 @@ const WizardScene = require('telegraf/scenes/wizard')
 var responses = require('./reponses')
 var config = require('./config.json')
 
-// var orders = ''
+let base = ""
+let cotacao = ""
 
-// const baseCoinHandler = new Composer()
-// baseCoinHandler.action('next', (ctx) => {
-//   ctx.reply('Step 2. Via inline button')
-//   return ctx.wizard.next()
-// })
-// baseCoinHandler.command('next', (ctx) => {
-//   ctx.reply('Step 2. Via command')
-//   return ctx.wizard.next()
-// })
-// baseCoinHandler.use((ctx) => ctx.replyWithMarkdown('Por favor, digite a moeda base.'))
+const baseCoinHandler = new Composer()
+baseCoinHandler.hears(/\w{2,4}/, (ctx) => {
+    base = ctx.match[0]
+    ctx.reply('Digite a moeda de Cotação')
+    return ctx.wizard.next()
+})
+baseCoinHandler.use((ctx) => ctx.reply('Por favor, digite o símbolo a moeda base.'))
 
-// const superWizard = new WizardScene('searchorder',
-//   (ctx) => {
-//     ctx.reply('Por favor, digite a moeda base')
-//     return ctx.wizard.next()
-//   },
-//   (ctx) => {
-//     orders = ctx.message.text
-//     ctx.reply('Agora digite a moeda de cotação')
-//     return ctx.wizard.next()
-//   },
-//   (ctx) => {
-//     orders = ctx.message.text
-//     ctx.reply('Aqui estão as últimas 5 ordens:')
-//     return ctx.scene.next()
-//   },
-//   (ctx) => {
-//     Exchange.getOrders(currency[1], ctx.from.first_name)
-//     .then(resp =>  {
-//         ctx.reply(resp) 
-//     })
-//   }
-// )
+const cotacaoHanler = new Composer()
+cotacaoHanler.hears(/\w{2,4}/, (ctx) => {
+    cotacao = ctx.match[0]
+    let pair = `${base}${cotacao}`
+    Exchange.getOrders(pair, ctx.from.first_name)
+    .then((resp) =>  {
+        ctx.scene.leave()
+        return retuctx.reply(resp) 
+    })
+    .catch((err) =>{
+        console.log(err)
+        ctx.reply('Não consegui consultar...')
+        return ctx.scene.leave()
+    })
+})
+cotacaoHanler.use((ctx) => ctx.reply('Cara, digita a moeda de cotação logo'))
+
+const superWizard = new WizardScene('searchorder',
+  (ctx) => {
+    ctx.reply('Por favor, digite a moeda base')
+    ctx.wizard.next()
+  },
+  baseCoinHandler,
+  cotacaoHanler
+)
 
 // const stage = new Stage([superWizard], { default: 'searchorder' })
 // bot.use(session())

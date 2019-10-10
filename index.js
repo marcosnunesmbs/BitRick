@@ -58,11 +58,11 @@ m.forEach( function(o) {
 })
 
 //messages text
-bot.hears('oi', (ctx) => {
+bot.hears(/^[o,O][i,I]|^[h,H][i,I]/, (ctx) => {
     var userName =  ctx.from.first_name
     ctx.reply(responses.get('welcome', userName))
 })
-bot.hears('xau', (ctx) => {
+bot.hears(/^[x,X][a,A][u,U]|[x,X][a,A][u,U]$|^[b,B][y,Y][e,E]|[b,B][y,Y][e,E]$|^[t,T][c,C][h,H][a,A][u,U]|[t,T][c,C][h,H][a,A][u,U]$/, (ctx) => {
     var userName =  ctx.from.first_name
     ctx.reply(responses.get('bye', userName))
 })
