@@ -81,5 +81,5 @@ app.get('/', function (req, res) {
 });
 
 app.listen(5000, function () {
-    console.log('Bot listening on port 6000!');
+    console.log('Bot listening on port 5000!');
 });
