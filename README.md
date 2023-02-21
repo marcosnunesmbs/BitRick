@@ -78,8 +78,11 @@ The config.js is necessary to bot map all plugins that have and create the comma
 
 The module_name key will be used to bot create the command to show the funcitons commands.
 
-Ex:
-![start command mapping services](http://www.dotcomma.com.br/wp-content/uploads/2019/10/start-sample.png)
+## Create a Plugin by example
+
+To create a new pluign you can use the npm script new:plugin and add --flag to set name.
+
+>npm run new:plugin --name=myplugin
 
 ## Available Plugins
 ### Binance
