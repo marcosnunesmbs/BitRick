@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js",
+    "new:plugin": "node scripts/new-plugin.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,9 +15,12 @@
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.1.0",
     "lodash": "^4.17.15",
     "node-binance-api": "^0.9.5",
     "node-telegram-bot-api": "^0.30.0",
+    "nodemon": "^2.0.20",
     "request": "^2.88.0",
     "telegraf": "^3.32.0"
   }

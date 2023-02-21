@@ -46,15 +46,20 @@ bot.action('servicos', (ctx) => {
 })
 
 m.forEach( function(o) {
-    var mod = require('./src/plugins/'+o+'/index')
-    modules.push(mod)
-    bot.command( mod.config.module_name, (ctx) => {
-        var text = "Consegui hackear os serviços abiaxo em " + mod.config.module_name +":"
-        mod.config.functions.forEach( function(x) {
-            text +=`\n /${x.keypass} = ${x.name}`
+    try {
+        var mod = require('./src/plugins/'+o+'/index')
+        modules.push(mod)
+        bot.command( mod.config.module_name, (ctx) => {
+            var text = "Consegui hackear os serviços abiaxo em " + mod.config.module_name +":"
+            mod.config.functions.forEach( function(x) {
+                text +=`\n /${x.keypass} = ${x.name}`
+            })
+            ctx.reply(text, back)   
         })
-        ctx.reply(text, back)   
-    })
+    } 
+    catch (e) {
+        console.log(e)
+    }
 })
 
 //messages text

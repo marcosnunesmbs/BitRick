@@ -1,0 +1,16 @@
+{
+    "module_name": "sampleplugin",
+    "description": "esse script faz xxxxx",
+    "functions": [
+        {
+            "name": "função sample",
+            "description": "digite /sample para fazer algo",
+            "keypass": "sample"
+        },
+        {
+            "name": "sample ajuda",
+            "description": "digite /samnplehelp para fazer algo",
+            "keypass": "samplehelp"
+        }
+    ]
+}
