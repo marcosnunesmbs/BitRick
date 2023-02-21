@@ -36,7 +36,7 @@ var Exchange = {
               resolve(responses.get('notfound', userName))
               return
             }
-            request('https://economia.awesomeapi.com.br/all/USD-RBL', { json: true }, (err, res, body) => {
+            request('https://economia.awesomeapi.com.br/all/USD', { json: true }, (err, res, body) => {
             if (err) { return console.log(err) }
             let a = parseFloat(saldo.available)
             let b = parseFloat(ticker[Object.keys(ticker)[0]])
@@ -81,7 +81,7 @@ var Exchange = {
   getOrders: ((symbol, userName, resp) => {
     return new Promise(function(resolve, reject) {  
       binance.allOrders(symbol.toUpperCase(), (error, orders) => {
-        request('https://economia.awesomeapi.com.br/all/USD-RBL', { json: true, orders }, (err, res, body) => {
+        request('https://economia.awesomeapi.com.br/all/USD', { json: true, orders }, (err, res, body) => {
             if (err) { return console.log(err) }
             if (typeof orders.length === "undefined") {
               resolve(responses.get('notfound', userName))

@@ -59,7 +59,7 @@ const balanceButtons = Markup.inlineKeyboard([
     Markup.callbackButton('USDT', 'getBalance usdt'),
     Markup.callbackButton('BNB', 'getBalance bnb'),
     Markup.callbackButton('LINK', 'getBalance link'),
-    Markup.callbackButton('DGB', 'getBalance dgb'),
+    Markup.callbackButton('BAND', 'getBalance band'),
     Markup.callbackButton('OUTRA', 'helpBalance'),
   ], { columns: 3 }).extra()
 
@@ -69,7 +69,7 @@ const balanceButtons = Markup.inlineKeyboard([
     Markup.callbackButton('USDC', 'getPrice usdc'),
     Markup.callbackButton('BNB', 'getPrice bnb'),
     Markup.callbackButton('LINK', 'getPrice link'),
-    Markup.callbackButton('DGB', 'getPrice dgb'),
+    Markup.callbackButton('BAND', 'getPrice band'),
     Markup.callbackButton('OUTRA', 'helpPrice'),
   ], { columns: 3 }).extra()
 
